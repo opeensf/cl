@@ -43,6 +43,6 @@ export const router = createBrowserRouter([
       }
     ]
   }
-], {
-  basename: '/cleanyellow'
+],}, {
+  basename: '/cl'
 });
