@@ -1,57 +1,75 @@
-# React + TypeScript + Vite
+# 大富翁辅助网站
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+一个专为大富翁游戏设计的辅助工具网站，帮助玩家管理游戏中的各种数据和功能。
 
-Currently, two official plugins are available:
+## 功能特性
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🏠 **首页** - 游戏概览和快速导航
+- 📈 **股票市场** - 股票价格管理和交易记录
+- 👥 **玩家管理** - 玩家信息和资产管理
+- 💳 **欠债管理** - 债务记录和还款跟踪
+- 🎲 **七星彩** - 彩票游戏功能
+- ✨ **机会命运** - 随机事件卡片管理
 
-## Expanding the ESLint configuration
+## 技术栈
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React 18 + TypeScript
+- Vite 构建工具
+- Tailwind CSS 样式框架
+- React Router 路由管理
+- Zustand 状态管理
+- Lucide React 图标库
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 快速开始
+
+### 安装依赖
+
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 开发模式
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  extends: [
-    // other configs...
-    // Enable lint rules for React
-    reactX.configs['recommended-typescript'],
-    // Enable lint rules for React DOM
-    reactDom.configs.recommended,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+npm run dev
 ```
+
+访问 `http://localhost:5173/cl/` 查看应用
+
+### 构建生产版本
+
+```bash
+npm run build
+```
+
+### 预览生产版本
+
+```bash
+npm run preview
+```
+
+## 部署
+
+本项目已配置 GitHub Actions 自动部署到 GitHub Pages。
+
+- **仓库地址**: https://github.com/opeensf/cl
+- **在线访问**: https://opeensf.github.io/cl/
+
+每次推送到 `main` 分支时，会自动触发构建和部署流程。
+
+## 项目结构
+
+```
+src/
+├── components/     # 可复用组件
+├── pages/         # 页面组件
+├── router/        # 路由配置
+├── store/         # 状态管理
+├── hooks/         # 自定义 Hooks
+├── lib/           # 工具函数
+└── assets/        # 静态资源
+```
+
+## 贡献
+
+欢迎提交 Issue 和 Pull Request 来改进这个项目！
